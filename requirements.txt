@@ -1,0 +1,7 @@
+fastapi==0.95.0
+psycopg2-binary==2.9.6
+pydantic==1.10.7
+requests==2.28.2d
+SQLAlchemy==2.0.16
+starlette==0.26.1
+uvicorn==0.21.1
