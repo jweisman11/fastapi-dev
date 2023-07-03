@@ -35,7 +35,7 @@ class Dataset(BaseModel):
         default=None,
         title="Agency which owns the dataset",
         max_length=25)
-    deprecrated: bool = Field(
+    deprecated: bool = Field(
         default=False,
         title="Whether the dataset is still active or available")
 
