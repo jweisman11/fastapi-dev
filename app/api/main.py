@@ -1,18 +1,8 @@
 # Import libraries
 from fastapi import FastAPI
-
-# Local imports
-from routers import helloworld, auth
-from db.database import Base, engine
+from app.api.routers import datasets
 
 app = FastAPI()
 
-# TODO: Update to use Alembic migrations to create tables
-Base.metadata.create_all(bind=engine)
-
 # Include
-app.include_router(helloworld.router)
-app.include_router(auth.router)
-# app.include_router(users.router)
-# app.include_router(metadata.router)
-# app.include_router(search.router)
+app.include_router(datasets.router)
