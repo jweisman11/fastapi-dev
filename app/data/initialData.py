@@ -72,7 +72,7 @@ DATASETS = [
         "deprecated": False,
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "TIDE",
         "full_name": "Terrorist Identities Data Environment",
         "description": "TODO: Update description",
@@ -82,7 +82,7 @@ DATASETS = [
         "deprecated": False,
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "PNR",
         "full_name": "Passenger Name Records",
         "description": "TODO: Update description",
@@ -92,7 +92,7 @@ DATASETS = [
         "deprecated": False,
     },
     {
-        "id": 9,
+        "id": 10,
         "name": "AMHS",
         "full_name": "Automated Message Handling System",
         "description": "TODO: Update description",
@@ -102,7 +102,7 @@ DATASETS = [
         "deprecated": False,
     },
     {
-        "id": 10,
+        "id": 11,
         "name": "MASS",
         "full_name": "Maritime Analytic Support System",
         "description": "TODO: Update description",
@@ -112,13 +112,23 @@ DATASETS = [
         "deprecated": False,
     },
     {
-        "id": 11,
+        "id": 12,
         "name": "HSIN",
         "full_name": "Homeland Security Information Network",
         "description": "TODO: Update description",
         "date_loaded": date(2002, 10, 20),
         "owner": "DHS HQ",
         "classification": "UNCLASSIFIED",
+        "deprecated": False,
+    },
+    {
+        "id": 13,
+        "name": "MASS",
+        "full_name": "Maritime Analytic Support System",
+        "description": "TODO: Update description",
+        "date_loaded": date(2002, 10, 20),
+        "owner": "USCG",
+        "classification": "TOP SECRET",
         "deprecated": False,
     },
 ]

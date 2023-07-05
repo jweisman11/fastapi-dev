@@ -1,8 +1,20 @@
 # Pydantic models for API
 
-from pydantic import BaseModel, Field, PastDate
-from datetime import date, datetime, time, timedelta
+from pydantic import BaseModel, Field
+from datetime import date
+from enum import Enum
 
+
+Classification = Enum(
+    value="Classification",
+    names=[
+        ("UNCLASSIFIED", "UNCLASSIFIED"),
+        ("UNCLASSIFIED/FOUO", "UNCLASSIFIED/FOUO"),
+        ("SECRET", "SECRET"),
+        ("TOP SECRET", "TOP SECRET"),
+        ("TOP SECRET/SCI", "TOP SECRET/SCI"),
+    ],
+)
 
 
 class Dataset(BaseModel):
@@ -10,39 +22,30 @@ class Dataset(BaseModel):
     Create Pydantic schema for the Dataset Object using:
     field_name: field_type
     """
-    name: str | None = Field(
-        default=None,
-        title="Dataset acronym",
-        max_length=25)
-    full_name: str = Field(
-        default=None,
-        title="Dataset full name",
-        max_length=100)
+
+    name: str | None = Field(default=None, title="Dataset acronym", max_length=25)
+    full_name: str = Field(default=None, title="Dataset full name", max_length=100)
     description: str | None = Field(
-        default=None,
-        title="Description of the dataset",
-        max_length=300)
-    added_on: date = Field(
-        default=date.today(),
-        title="Date the dataset was added to TSDH")
-    start_date: PastDate() = Field(
-        default=date.today() - 1,
-        title="Oldest date coverered in the dataset")
-    end_date: date = Field(
-        default=date.today(),
-        title="Newest date coverered in the dataset"
+        default=None, title="Description of the dataset", max_length=300
+    )
+    date_loaded: date = Field(
+        default=date.today(), title="Date the dataset was added to TSDH"
+    )
     owner: str | None = Field(
-        default=None,
-        title="Agency which owns the dataset",
-        max_length=25)
+        default=None, title="Agency which owns the dataset", max_length=25
+    )
+    classification: Classification = Field(
+        default=None, title="Classification of the dataset"
+    )
     deprecated: bool = Field(
-        default=False,
-        title="Whether the dataset is still active or available")
+        default=False, title="Whether the dataset is still active or available"
+    )
 
     class Config:
         """
         Define example object of Dataset schema
         """
+
         schema_extra = {
             "examples": [
                 {
@@ -53,7 +56,7 @@ class Dataset(BaseModel):
                     "start_date": date(2020, 3, 11),
                     "end_date": date.today(),
                     "owner": "CBP",
-                    "deprecated": False
+                    "deprecated": False,
                 }
             ]
         }
