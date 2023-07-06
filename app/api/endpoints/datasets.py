@@ -82,6 +82,38 @@ async def all_dataset_schemas_by_id(dataset_id: int):
 
 
 @router.get(
+    path="/metadata",
+    response_model="",
+    status_code=status.HTTP_200_OK,
+    summary="Get all datasets metadata",
+    description="",
+    response_description="",
+    deprecated=False,
+)
+async def all_dataset_metadata():
+    """
+    TODO: Update docstring
+    """
+    return {"DATASETS": DATASETS}
+
+
+@router.get(
+    path="/metadata/{dataset_id:int}",
+    response_model="",
+    status_code=status.HTTP_200_OK,
+    summary="Get metadata of dataset by ID",
+    description="",
+    response_description="",
+    deprecated=False,
+)
+async def dataset_metadata_by_id(dataset_id: int):
+    """
+    TODO: Update docstring
+    """
+    return {"DATASETS": DATASETS}
+
+
+@router.get(
     path="/{dataset_name:str}",
     response_model=Dataset,
     status_code=status.HTTP_200_OK,
