@@ -1,6 +1,15 @@
 # Import libraries
-from fastapi import FastAPI
-from endpoints import datasets
+from fastapi import FastAPI, APIRouter
+from endpoints import (
+    service,
+    login,
+    datasets,
+    stats,
+    data_operations,
+    utils,
+    governance,
+    users,
+)
 
 # Define the API's description using Markdown
 description = """
@@ -20,6 +29,15 @@ app_metadata = {
 }
 
 app = FastAPI(**app_metadata)
+api_router = APIRouter()
 
 # Include routes to each grouping of endpoints
-app.include_router(datasets.router, prefix="/dataset", tags=["TSDH Datasets"])
+api_router.include_router(service.router, prefix="/service", tags=["Admin"])
+api_router.include_router(login.router, prefix="/login", tags=["Login"])
+api_router.include_router(datasets.router, prefix="/dataset", tags=["TSDH Datasets"])
+api_router.include_router(stats.router, prefix="/stats", tags=["Statistics"])
+api_router.include_router(data_operations.router, prefix="/ops", tags=["Operations"])
+api_router.include_router(utils.router, prefix="/utils", tags=["Utilities"])
+api_router.include_router(governance.router, prefix="/governance", tags=["Governance"])
+api_router.include_router(users.router, prefix="/user", tags=["Users"])
+app.include_router(api_router, prefix="/api/v1")

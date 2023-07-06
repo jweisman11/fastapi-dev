@@ -3,28 +3,11 @@ import sys
 sys.path.append("..")
 
 from fastapi import APIRouter, status, Header, HTTPException
-from data.initialData import DATASETS
+from data.initialDatasets import DATASETS
 from schemas.dataset import Dataset, Classification
 from typing import Annotated, List, Union
 
 router = APIRouter()
-
-
-@router.get(
-    path="/health",
-    response_model="",
-    status_code=status.HTTP_200_OK,
-    summary="Health Check",
-    description="TODO: Add longer description about what this API endpoint does",
-    response_description="Return health status of the dataset API endpoints",
-    deprecated=False,
-)
-async def health_check() -> dict:
-    """
-    Root GET
-    """
-
-    return {"msg": "API is up and running"}
 
 
 @router.get(
@@ -36,11 +19,10 @@ async def health_check() -> dict:
     response_description="List of all datasets",
     deprecated=False,
 )
-async def all_datasets(X_Token: str | None = Header(default=None)):
-    return {"msg": X_Token}
+async def all_datasets():
+    return {"DATASETS": DATASETS}
 
 
-# TODO: add response model
 @router.get(
     path="/{dataset_id:int}",
     response_model=Dataset,
@@ -65,6 +47,38 @@ async def fetch_dataset_id(dataset_id: int) -> dict:
 
     if result:
         return result[0]
+
+
+@router.get(
+    path="/schema",
+    response_model="",
+    status_code=status.HTTP_200_OK,
+    summary="Get all dataset schemas",
+    description="",
+    response_description="",
+    deprecated=False,
+)
+async def all_dataset_schemas():
+    """
+    TODO: Update docstring
+    """
+    return {"DATASETS": DATASETS}
+
+
+@router.get(
+    path="/schema/{dataset_id:int}",
+    response_model="",
+    status_code=status.HTTP_200_OK,
+    summary="Get schema of dataset by ID",
+    description="",
+    response_description="",
+    deprecated=False,
+)
+async def all_dataset_schemas_by_id(dataset_id: int):
+    """
+    TODO: Update docstring
+    """
+    return {"DATASETS": DATASETS}
 
 
 @router.get(
