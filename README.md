@@ -11,7 +11,6 @@
 </div>
 
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/jweisman11/fastapi-dev">
     <img src="images/zoidberg.png" alt="Zoidberg" width="80" height="120">
