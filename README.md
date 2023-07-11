@@ -47,4 +47,4 @@ Some text
 [stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
 [stars-url]: https://github.com/jweisman11/fastapi-dev/stargazers
 [issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/jweisman11/fastapi-dev/issues
+[issues-url]: "https://github.com/jweisman11/fastapi-dev/issues"
