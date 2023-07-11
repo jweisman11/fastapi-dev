@@ -59,53 +59,53 @@ async def health_check_by_dataset() -> dict:
     return {"msg": "All users"}
 
 
-@router.post(
-    path="/",
-    response_model="",
-    status_code=status.HTTP_200_OK,
-    summary="",
-    description="",
-    response_description="",
-    deprecated=False,
-)
-async def service_post() -> dict:
-    """
-    Fetch all users in system
-    """
+# @router.post(
+#     path="/",
+#     response_model="",
+#     status_code=status.HTTP_200_OK,
+#     summary="",
+#     description="",
+#     response_description="",
+#     deprecated=False,
+# )
+# async def service_post() -> dict:
+#     """
+#     Fetch all users in system
+#     """
 
-    return {"msg": "All users"}
-
-
-# TODO: Update to pass user_id via query params, not path
-@router.put(
-    path="/",
-    response_model="",
-    status_code=status.HTTP_200_OK,
-    summary="",
-    description="",
-    response_description="",
-    deprecated=False,
-)
-async def service_put() -> dict:
-    """
-    Fetch all users in system
-    """
-
-    return {"msg": "All users"}
+#     return {"msg": "All users"}
 
 
-@router.delete(
-    path="/",
-    response_model="",
-    status_code=status.HTTP_200_OK,
-    summary="",
-    description="",
-    response_description="",
-    deprecated=False,
-)
-async def service_delete() -> dict:
-    """
-    Fetch all users in system
-    """
+# # TODO: Update to pass user_id via query params, not path
+# @router.put(
+#     path="/",
+#     response_model="",
+#     status_code=status.HTTP_200_OK,
+#     summary="",
+#     description="",
+#     response_description="",
+#     deprecated=False,
+# )
+# async def service_put() -> dict:
+#     """
+#     Fetch all users in system
+#     """
 
-    return {"msg": "All users"}
+#     return {"msg": "All users"}
+
+
+# @router.delete(
+#     path="/",
+#     response_model="",
+#     status_code=status.HTTP_200_OK,
+#     summary="",
+#     description="",
+#     response_description="",
+#     deprecated=False,
+# )
+# async def service_delete() -> dict:
+#     """
+#     Fetch all users in system
+#     """
+
+#     return {"msg": "All users"}

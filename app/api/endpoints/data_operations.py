@@ -43,10 +43,10 @@ async def read_last_five_records(dataset_id: int) -> dict:
 
 
 @router.post(
-    path="/",
+    path="/upload",
     response_model="",
     status_code=status.HTTP_200_OK,
-    summary="",
+    summary="Upload data to a TSDH dataset",
     description="",
     response_description="",
     deprecated=False,
@@ -61,10 +61,10 @@ async def service_post() -> dict:
 
 # TODO: Update to pass user_id via query params, not path
 @router.put(
-    path="/",
+    path="/update",
     response_model="",
     status_code=status.HTTP_200_OK,
-    summary="",
+    summary="Update data in a TSDH dataset",
     description="",
     response_description="",
     deprecated=False,
@@ -78,10 +78,10 @@ async def service_put() -> dict:
 
 
 @router.delete(
-    path="/",
+    path="/remove",
     response_model="",
     status_code=status.HTTP_200_OK,
-    summary="",
+    summary="Delete data from a TSDH dataset",
     description="",
     response_description="",
     deprecated=False,

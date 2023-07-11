@@ -26,7 +26,24 @@ async def root() -> dict:
 
 
 @router.get(
-    path="/",
+    path="/protected-endpoint",
+    response_model="",  # list[User],
+    status_code=status.HTTP_200_OK,
+    summary="Only accessible by admin",
+    description="",
+    response_description="",
+    deprecated=False,
+)
+async def root() -> dict:
+    """
+    Root GET
+    """
+
+    return {"msg": "All users"}
+
+
+@router.get(
+    path="/health",
     response_model="",  # User,
     status_code=status.HTTP_200_OK,
     summary="Check health of all TSDH datasets",
@@ -43,7 +60,7 @@ async def stats_all() -> dict:
 
 
 @router.get(
-    path="/{dataset_id}",
+    path="/health/{dataset_id}",
     response_model="",  # User,
     status_code=status.HTTP_200_OK,
     summary="Check health of TSDH dataset by ID",
@@ -59,16 +76,16 @@ async def stats_all(dataset_id: int) -> dict:
     return {"msg": "All users"}
 
 
-@router.post(
-    path="/",
-    response_model="",
+@router.get(
+    path="/health/cds",
+    response_model="",  # User,
     status_code=status.HTTP_200_OK,
-    summary="",
+    summary="Check health of cross domain service for TSDH datasets",
     description="",
     response_description="",
     deprecated=False,
 )
-async def service_post() -> dict:
+async def stats_all() -> dict:
     """
     Fetch all users in system
     """
@@ -76,17 +93,16 @@ async def service_post() -> dict:
     return {"msg": "All users"}
 
 
-# TODO: Update to pass user_id via query params, not path
-@router.put(
-    path="/",
-    response_model="",
+@router.get(
+    path="/health/cds/{dataset_id}",
+    response_model="",  # User,
     status_code=status.HTTP_200_OK,
-    summary="",
+    summary="Check health of cross domain service for TSDH datasets by ID",
     description="",
     response_description="",
     deprecated=False,
 )
-async def service_put() -> dict:
+async def stats_all(dataset_id: int) -> dict:
     """
     Fetch all users in system
     """
@@ -94,18 +110,53 @@ async def service_put() -> dict:
     return {"msg": "All users"}
 
 
-@router.delete(
-    path="/",
-    response_model="",
-    status_code=status.HTTP_200_OK,
-    summary="",
-    description="",
-    response_description="",
-    deprecated=False,
-)
-async def service_delete() -> dict:
-    """
-    Fetch all users in system
-    """
+# @router.post(
+#     path="/",
+#     response_model="",
+#     status_code=status.HTTP_200_OK,
+#     summary="",
+#     description="",
+#     response_description="",
+#     deprecated=False,
+# )
+# async def service_post() -> dict:
+#     """
+#     Fetch all users in system
+#     """
 
-    return {"msg": "All users"}
+#     return {"msg": "All users"}
+
+
+# # TODO: Update to pass user_id via query params, not path
+# @router.put(
+#     path="/",
+#     response_model="",
+#     status_code=status.HTTP_200_OK,
+#     summary="",
+#     description="",
+#     response_description="",
+#     deprecated=False,
+# )
+# async def service_put() -> dict:
+#     """
+#     Fetch all users in system
+#     """
+
+#     return {"msg": "All users"}
+
+
+# @router.delete(
+#     path="/",
+#     response_model="",
+#     status_code=status.HTTP_200_OK,
+#     summary="",
+#     description="",
+#     response_description="",
+#     deprecated=False,
+# )
+# async def service_delete() -> dict:
+#     """
+#     Fetch all users in system
+#     """
+
+#     return {"msg": "All users"}
