@@ -31,7 +31,7 @@
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Python][Python]][python-url]
+* [![python][python]][python-url]
 * [![fastapi][fastapi]][fastapi-url]
 * [![React][React.js]][React-url]
 
