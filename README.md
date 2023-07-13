@@ -49,6 +49,7 @@ Backend
 * Task Scheduling and Background Jobs with a Job Queue
 * CORS
 * Custom middlewear
+* Prevent SQL injection attack
 * TBD
 
 Frontend
@@ -65,8 +66,11 @@ Frontend
 * All endpoints should be versioned -> /v1/items
 * Resource "cross reference" each other -> /carts/{123}/items/{123} 
 
+## Resource
 
-
+* https://python.plainenglish.io/a-comprehensive-guide-to-structuring-a-fastapi-project-for-reproducibility-and-maintainability-1705c41dac41
+* https://medium.com/@alamincoders/a-complete-api-development-guide-common-terms-tools-and-best-practices-7bd9abba4624
+* https://github.com/zhanymkanov/fastapi-best-practices
 
 
 
