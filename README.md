@@ -93,8 +93,8 @@ Frontend
 [stars-shield]: https://img.shields.io/github/stars/jweisman11/fastapi-dev.svg?style=for-the-badge
 [stars-url]: https://github.com/jweisman11/fastapi-dev/stargazers
 [issues-shield]: https://img.shields.io/github/issues/jweisman11/fastapi-dev.svg?style=for-the-badge
-[issues-url]: "https://github.com/jweisman11/fastapi-dev/issues"
-[python]: https://img.shields.io/badge/python?style=for-the-badge&logo=react&logoColor=61DAFB
+[issues-url]: https://github.com/jweisman11/fastapi-dev/issues
+[python]: https://img.shields.io/pypi/pyversions/fastapi?style=for-the-badge
 [python-url]: https://www.python.org/
 [fastapi]: https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white
 [fastapi-url]: https://fastapi.tiangolo.com/
