@@ -31,7 +31,8 @@
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Python][Python]][Next-url]
+* [![Python][Python]][python-url]
+* [![fastapi][fastapi]][fastapi-url]
 * [![React][React.js]][React-url]
 
 
@@ -97,5 +98,5 @@ Frontend
 [python-url]: https://www.python.org/
 [fastapi]: https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white
 [fastapi-url]: https://fastapi.tiangolo.com/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
