@@ -22,9 +22,17 @@
 
 </div>
 
+<!-- ABOUT THE PROJECT -->
 # Zoidberg API
 
 
+
+### Built With
+
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+* [![Python][Python]][Next-url]
+* [![React][React.js]][React-url]
 
 
 ## Features
@@ -68,12 +76,11 @@ Frontend
 
 ## Resource
 
-* https://python.plainenglish.io/a-comprehensive-guide-to-structuring-a-fastapi-project-for-reproducibility-and-maintainability-1705c41dac41
+* https://fastapi.tiangolo.com/
+* https://github.com/mjhea0/awesome-fastapi
 * https://medium.com/@alamincoders/a-complete-api-development-guide-common-terms-tools-and-best-practices-7bd9abba4624
 * https://github.com/zhanymkanov/fastapi-best-practices
-
-
-
+* https://python.plainenglish.io/a-comprehensive-guide-to-structuring-a-fastapi-project-for-reproducibility-and-maintainability-1705c41dac41 (not helpful)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -86,3 +93,9 @@ Frontend
 [stars-url]: https://github.com/jweisman11/fastapi-dev/stargazers
 [issues-shield]: https://img.shields.io/github/issues/jweisman11/fastapi-dev.svg?style=for-the-badge
 [issues-url]: "https://github.com/jweisman11/fastapi-dev/issues"
+[python]: https://img.shields.io/badge/python?style=for-the-badge&logo=react&logoColor=61DAFB
+[python-url]: https://www.python.org/
+[fastapi]: https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white
+[fastapi-url]: https://fastapi.tiangolo.com/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
